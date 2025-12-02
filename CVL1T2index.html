@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="CVL1T2styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="fade-in">Hi, I'm <span class="highlight">Avinash Verma</span></h1>
+                <p class="fade-in-delay">Web Developer & Designer</p>
+                <a href="#projects" class="btn fade-in-delay-2">View My Work</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a passionate web developer with expertise in creating beautiful, functional websites. I love turning ideas into reality through clean code and creative design.</p>
+                    <p>With experience in HTML, CSS, JavaScript, and modern frameworks, I build responsive and user-friendly web applications that make a difference.</p>
+                </div>
+                <div class="skills">
+                    <div class="skill-item">
+                        <span>HTML/CSS</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>JavaScript</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>React</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="project-grid">
+                <div class="project-card" onclick="viewProjectDetail(1)" style="cursor: pointer;">
+                    <div class="project-image">
+                        <div class="placeholder-img">Project 1</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>E-Commerce Website</h3>
+                        <p>A fully responsive online shopping platform with cart functionality and payment integration.</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" onclick="viewProjectDetail(2)" style="cursor: pointer;">
+                    <div class="project-image">
+                        <div class="placeholder-img">Project 2</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Task Management App</h3>
+                        <p>An intuitive task tracker with drag-and-drop functionality and local storage support.</p>
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>CSS</span>
+                            <span>API</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" onclick="viewProjectDetail(3)" style="cursor: pointer;">
+                    <div class="project-image">
+                        <div class="placeholder-img">Project 3</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Weather Dashboard</h3>
+                        <p>Real-time weather application with location search and 5-day forecast display.</p>
+                        <div class="project-tags">
+                            <span>JavaScript</span>
+                            <span>API</span>
+                            <span>CSS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>📧 Email</h3>
+                        <p>avinashverma@example.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>📱 Phone</h3>
+                        <p>+(91) 823273XXXX</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>📍 Location</h3>
+                        <p>New Delhi, India</p>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="email" id="email" placeholder="Your Email" required>
+                    <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Avinash Verma. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/avinash-verma-5054a8381/">LinkedIn</a>
+                <a href="https://github.com/aviverma02">GitHub</a>
+                <a href="https://x.com/">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Page (Hidden by default) -->
+    <div id="successPage" class="success-page">
+        <div class="success-container">
+            <div class="success-animation">✓</div>
+            <h1>Thank You!</h1>
+            <p id="successMessage">Your message has been received</p>
+            <div class="submitted-info">
+                <div class="info-item">
+                    <strong>Name:</strong>
+                    <p id="submittedName"></p>
+                </div>
+                <div class="info-item">
+                    <strong>Email:</strong>
+                    <p id="submittedEmail"></p>
+                </div>
+                <div class="info-item">
+                    <strong>Message:</strong>
+                    <p id="submittedMessage"></p>
+                </div>
+            </div>
+            <button onclick="goBackToForm()" class="btn btn-back">Send Another Message</button>
+            <a href="#home" onclick="goHome()" class="btn btn-home">Back to Home</a>
+        </div>
+    </div>
+
+    <!-- Project Detail Page (Hidden by default) -->
+    <div id="projectDetailPage" class="project-detail-page">
+        <button class="close-btn" onclick="closeProjectDetail()">✕</button>
+        <div class="project-detail-container">
+            <div class="project-detail-header">
+                <h1 id="projectTitle"></h1>
+                <p id="projectSubtitle" class="project-subtitle"></p>
+            </div>
+            <div class="project-detail-content">
+                <div class="project-detail-image">
+                    <div id="projectDetailImg" class="placeholder-img-large"></div>
+                </div>
+                <div class="project-detail-info">
+                    <div class="detail-section">
+                        <h2>Overview</h2>
+                        <p id="projectOverview"></p>
+                    </div>
+                    <div class="detail-section">
+                        <h2>Key Features</h2>
+                        <ul id="projectFeatures" class="features-list"></ul>
+                    </div>
+                    <div class="detail-section">
+                        <h2>Technologies Used</h2>
+                        <div id="projectTechStack" class="tech-stack"></div>
+                    </div>
+                    <div class="detail-section">
+                        <h2>Project Metrics</h2>
+                        <div class="metrics-grid">
+                            <div class="metric">
+                                <span class="metric-value" id="projectDuration"></span>
+                                <span class="metric-label">Duration</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value" id="projectStatus"></span>
+                                <span class="metric-label">Status</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value" id="projectTeamSize"></span>
+                                <span class="metric-label">Team Size</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="closeProjectDetail()" class="btn btn-primary">Back to Projects</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Project Data
+        const projectsData = {
+            1: {
+                title: "E-Commerce Website",
+                subtitle: "Online Shopping Platform",
+                overview: "A fully responsive e-commerce platform built with modern web technologies. This project showcases a complete shopping experience including product browsing, cart management, and secure payment integration. The platform is optimized for all devices and provides a smooth user experience with fast loading times.",
+                features: [
+                    "Product catalog with search and filter functionality",
+                    "Shopping cart with real-time updates",
+                    "Secure checkout and payment integration",
+                    "User account management and order tracking",
+                    "Responsive design for mobile and desktop",
+                    "Product reviews and ratings system"
+                ],
+                technologies: ["HTML5", "CSS3", "JavaScript", "Payment Gateway", "Responsive Design"],
+                duration: "3 months",
+                status: "Completed",
+                teamSize: "4 members"
+            },
+            2: {
+                title: "Task Management App",
+                subtitle: "Productivity Tracker",
+                overview: "An intuitive task management application built with React that helps teams organize and track their work efficiently. Features include drag-and-drop functionality, real-time collaboration, and persistent storage. The app provides a clean interface with powerful functionality for managing complex projects.",
+                features: [
+                    "Drag-and-drop task organization",
+                    "Multiple project workspaces",
+                    "Real-time team collaboration",
+                    "Task priority and deadline management",
+                    "Local storage for data persistence",
+                    "Task analytics and reporting"
+                ],
+                technologies: ["React", "CSS3", "JavaScript", "Local Storage", "API Integration"],
+                duration: "2 months",
+                status: "Completed",
+                teamSize: "3 members"
+            },
+            3: {
+                title: "Weather Dashboard",
+                subtitle: "Real-time Weather Information",
+                overview: "A dynamic weather application that provides real-time weather data using external APIs. Users can search for locations and view detailed weather information including current conditions, hourly forecasts, and 5-day predictions. The application features an intuitive interface with smooth animations and responsive design.",
+                features: [
+                    "Real-time weather data from API",
+                    "Location search with autocomplete",
+                    "Current weather and 5-day forecast",
+                    "Hourly weather breakdown",
+                    "Weather alerts and notifications",
+                    "Temperature unit conversion (°C/°F)"
+                ],
+                technologies: ["JavaScript", "Weather API", "CSS3", "JSON", "Responsive Design"],
+                duration: "1.5 months",
+                status: "Completed",
+                teamSize: "2 members"
+            }
+        };
+
+        function viewProjectDetail(projectId) {
+            const project = projectsData[projectId];
+            
+            if (!project) return;
+            
+            // Populate project details
+            document.getElementById('projectTitle').textContent = project.title;
+            document.getElementById('projectSubtitle').textContent = project.subtitle;
+            document.getElementById('projectOverview').textContent = project.overview;
+            document.getElementById('projectDetailImg').textContent = `Project ${projectId}`;
+            document.getElementById('projectDuration').textContent = project.duration;
+            document.getElementById('projectStatus').textContent = project.status;
+            document.getElementById('projectTeamSize').textContent = project.teamSize;
+            
+            // Populate features
+            const featuresList = document.getElementById('projectFeatures');
+            featuresList.innerHTML = '';
+            project.features.forEach(feature => {
+                const li = document.createElement('li');
+                li.textContent = feature;
+                featuresList.appendChild(li);
+            });
+            
+            // Populate tech stack
+            const techStack = document.getElementById('projectTechStack');
+            techStack.innerHTML = '';
+            project.technologies.forEach(tech => {
+                const tag = document.createElement('span');
+                tag.className = 'tech-tag';
+                tag.textContent = tech;
+                techStack.appendChild(tag);
+            });
+            
+            // Show project detail page
+            document.getElementById('projectDetailPage').style.display = 'block';
+            document.getElementById('projects').style.display = 'none';
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function closeProjectDetail() {
+            document.getElementById('projectDetailPage').style.display = 'none';
+            document.getElementById('projects').style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+            
+            // Validate fields
+            if (!name || !email || !message) {
+                alert('Please fill in all fields');
+                return;
+            }
+            
+            // Validate email format
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address');
+                return;
+            }
+            
+            // Store form data
+            const formData = {
+                name: name,
+                email: email,
+                message: message,
+                timestamp: new Date().toLocaleString()
+            };
+            
+            // Save to localStorage
+            let submissions = JSON.parse(localStorage.getItem('formSubmissions')) || [];
+            submissions.push(formData);
+            localStorage.setItem('formSubmissions', JSON.stringify(submissions));
+            
+            // Display success page
+            displaySuccessPage(formData);
+        });
+        
+        function displaySuccessPage(formData) {
+            // Hide contact section and show success page
+            document.getElementById('contact').style.display = 'none';
+            document.getElementById('successPage').style.display = 'block';
+            
+            // Populate success page with submitted data
+            document.getElementById('submittedName').textContent = formData.name;
+            document.getElementById('submittedEmail').textContent = formData.email;
+            document.getElementById('submittedMessage').textContent = formData.message;
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        
+        function goBackToForm() {
+            // Reset form and show contact section again
+            document.getElementById('contactForm').reset();
+            document.getElementById('contact').style.display = 'block';
+            document.getElementById('successPage').style.display = 'none';
+            
+            // Scroll to contact section
+            const contactSection = document.getElementById('contact');
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function goHome() {
+            // Reset form and navigate to home
+            document.getElementById('contactForm').reset();
+            document.getElementById('contact').style.display = 'block';
+            document.getElementById('successPage').style.display = 'none';
+            
+            const homeSection = document.getElementById('home');
+            homeSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
